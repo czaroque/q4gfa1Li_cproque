@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up Sheet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="signupSheet" onsubmit="return iFunction()">
+        <fieldset form="suSheet">
+            <legend>Please sign-up or else.</legend>
+
+            <label for="name">Name: </label> <br>
+            <input type="text" id="name" name="name" onblur="redFunction(this)" onfocus="greenFunction(this)"> <br> <br>
+
+            <label for="userName">Preferred Username: </label> <br>
+            <input type="text" id="un" name="userName" onblur="redFunction(this)" onfocus="greenFunction(this)"> <br> <br>
+
+            <label for="password">Password: </label> <br>
+            <input type="password" id="password" name="password" onblur="redFunction()" onfocus="greenFunction()"> <br> <br>
+
+            <label for="userAge">Input your age: </label> <br>
+            <input type="number" id="userAge" name="userAge" min="0" max="100" onblur="redFunction()" onfocus="greenFunction()"> <br> <br>
+
+            <label for="gender">Gender: </label> <br>
+            <select id="gender" onblur="redFunction()" onfocus="greenFunction()">
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+                <option value="pntm">Prefer not to say</option>
+            </select><br><br>
+
+            <label for="email">Email Address: </label> <br>
+            <input type="text" id="email" name="email" onblur="redFunction()" onfocus="greenFunction()"> <br> <br>
+
+            <label for="address">Address: </label> <br>
+            <textarea id="tArea" name="address" rows="2" cols="30" onblur="redFunction()" onfocus="greenFunction()"></textarea> <br> <br>
+
+            <label for="uInterest">What are your interests? </label> <br>
+            <textarea id="uInterest" name="interest" rows="2" cols="30" onblur="redFunction()" onfocus="greenFunction()"></textarea> <br> <br>
+
+            <input type="submit"></input> <br>
+            <input type="reset" value="Clear" onclick="clear()">
+
+        </fieldset>
+
+    <p id="displayData"></p>
+    </form>
+    
+</body>
+</html>
